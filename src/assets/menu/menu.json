@@ -1,0 +1,18 @@
+{
+    "data": [
+        {
+            "name": "Application",
+            "meta": ["application"],
+            "children": [
+                {
+                    "name": "Feed",
+                    "to": "/feed"
+                },
+                {
+                    "name": "Authors",
+                    "to": "/authors"
+                }
+            ]
+        }
+    ]
+}

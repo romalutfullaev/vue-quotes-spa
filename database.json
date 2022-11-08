@@ -1,0 +1,125 @@
+{
+  "authors": [
+    {
+      "id": 1,
+      "name": "Elon Mask",
+      "password": "на стадии разработки",
+      "registeredAt": "10/11/2022"
+    },
+    {
+      "id": 2,
+      "name": "Hello World",
+      "password": "на стадии разработки",
+      "registeredAt": "10/11/2022"
+    }
+  ],
+  "genre": [
+    {
+      "title": "На стадии разработки"
+    }
+  ],
+  "quotes": [
+    {
+      "title": "First quote of day",
+      "author": "Elon Mask",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "genre": [
+        {
+          "label": "Technology"
+        },
+        {
+          "label": "Motivational"
+        }
+      ],
+      "createdAt": "11/8/2022, 12:08:23 PM",
+      "id": 6
+    },
+    {
+      "title": "Best quote ever",
+      "author": "M. Jordan",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "genre": [
+        {
+          "label": "Language Skills"
+        },
+        {
+          "label": "Success"
+        }
+      ],
+      "createdAt": "11/8/2022, 12:09:15 PM",
+      "id": 7
+    },
+    {
+      "title": "The best of the best",
+      "author": "Hindi by from Tutorial",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "genre": [
+        {
+          "label": "Language Skills"
+        },
+        {
+          "label": "Technology"
+        },
+        {
+          "label": "Life Skills"
+        }
+      ],
+      "createdAt": "11/8/2022, 12:09:15 PM",
+      "id": 8
+    },
+    {
+      "title": "Takoe sebe quote",
+      "author": "The Unique Uz",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "genre": [
+        {
+          "label": "Language Skills"
+        },
+        {
+          "label": "Success"
+        },
+        {
+          "label": "Life Skills"
+        },
+        {
+          "label": "Technology"
+        }
+      ],
+      "createdAt": "11/8/2022, 12:10:24 PM",
+      "id": 9
+    },
+    {
+      "title": "Best quote ever",
+      "author": "Hindi by from Tutorial",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "genre": [
+        {
+          "label": "Language Skills"
+        },
+        {
+          "label": "Life Skills"
+        },
+        {
+          "label": "Technology"
+        },
+        {
+          "label": "Motivational"
+        }
+      ],
+      "createdAt": "11/8/2022, 12:10:56 PM",
+      "id": 10
+    },
+    {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "author": "Elon Mask",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "genre": [
+        {
+          "label": "Motivational"
+        }
+      ],
+      "createdAt": "11/8/2022, 12:12:13 PM",
+      "id": 11
+    }
+  ]
+}
