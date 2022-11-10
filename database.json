@@ -100,7 +100,7 @@
     {
       "title": "Hello everybody",
       "author": "M. Jordan",
-      "description": "We have just add new feature. Actually that feature is updating quotes dfl;sdaj asdfsadfnl;\ndsafdsfsadfdsa",
+      "description": "We have just add new feature. Actually that feature is updating quotes dfl;sdaj asdfsadfnl;sfd sdakfl; ;lsdkajf l;askdm,c.xnv \ndsafdsfsadfdsa dsalkfjas;ldfknsdalvln sadlkfsad;lfj\n",
       "genre": [
         {
           "label": "Language Skills"
@@ -112,7 +112,7 @@
           "label": "Technology"
         }
       ],
-      "updatedAt": "11/10/2022, 2:12:25 PM",
+      "updatedAt": "11/10/2022, 3:40:48 PM",
       "createdAt": "11/10/2022, 2:00:47 PM",
       "id": 12
     }

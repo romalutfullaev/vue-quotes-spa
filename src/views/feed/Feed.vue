@@ -107,7 +107,6 @@
 
 <script>
 import axios from 'axios';
-import QuoteService from "../../service/QuoteService";
 import InputText from '../../components/inputtext/InputText';
 
 export default {
@@ -146,13 +145,7 @@ export default {
             submitted: false,
         };
     },
-    quoteService: null,
-    created() {
-        this.quoteService = new QuoteService();
-    },
     mounted() {
-        this.quoteService.getQuotes().then((data) => (this.quotes = data));
-
         axios
             .get('http://localhost:3000/quotes')
             .then(response => (this.quotes = response.data));
