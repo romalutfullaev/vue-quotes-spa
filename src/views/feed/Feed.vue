@@ -74,7 +74,7 @@
         </div>
 
         <div class="field">
-            <label for="author.name" class="mb-3">Author Name</label>
+            <label for="author" class="mb-3">Author Name</label>
             <InputText v-model="quote.author" type="text" disabled />
         </div>
 
@@ -84,7 +84,7 @@
         </div>
         <template #footer>
             <Button label="Cancel" icon="pi pi-times" class="p-button-text" @click="hideDialog" />
-            <Button label="Save" icon="pi pi-check" class="p-button-text" @click="saveQuote" />
+            <Button label="Save" icon="pi pi-check" class="p-button-text" @click="updateQuote(quote.id)" />
         </template>
     </Dialog>
 
@@ -132,7 +132,6 @@ export default {
             ],
             title: '',
             description: '',
-            createdAt: new Date(Date.now()).toLocaleString(),
             display: false,
             layout: 'grid',
             displayConfirmation: false,
@@ -157,7 +156,6 @@ export default {
         axios
             .get('http://localhost:3000/quotes')
             .then(response => (this.quotes = response.data));
-
     },
     methods: {
         openNew() {
@@ -168,6 +166,9 @@ export default {
             this.quoteDialog = false;
             this.editQuoteDialog = false;
             this.submitted = false;
+            this.quote = {};
+            this.selectedAuthor = {};
+            this.selectedGenre = {};
         },
         saveQuote() {
             this.submitted = true;
@@ -177,22 +178,41 @@ export default {
                 author: this.selectedAuthor.name,
                 description: this.quote.description,
                 genre: this.selectedGenre,
-                createdAt: this.createdAt
+                updatedAt: new Date(Date.now()).toLocaleString(),
+                createdAt: new Date(Date.now()).toLocaleString(),
             }
 
-            if (this.quote.title) {
-                this.quotes.push(form);
-                axios
-                    .post('http://localhost:3000/quotes', form)
-                    .then(() => {
-                        this.$toast.add({severity:'success', summary: 'Successful', detail: 'Quote Created', life: 3000});
-                    })
-            }
+            axios
+                .post('http://localhost:3000/quotes', form)
+                .then(() => {
+                    this.$toast.add({severity:'success', summary: 'Successful', detail: 'Quote Created', life: 3000});
+                })
 
             this.quoteDialog = false;
-            // this.editQuoteDialog = false;
             this.quote = {};
-            },
+        },
+
+        updateQuote(id) {
+            this.submitted = true;
+
+            let upd = {
+                title: this.quote.title,
+                author: this.quote.author,
+                description: this.quote.description,
+                genre: this.quote.genre,
+                updatedAt: new Date(Date.now()).toLocaleString(),
+                createdAt: this.quote.createdAt,
+            }
+
+            axios
+                  .put(`http://localhost:3000/quotes/${id}`,upd)
+                  .then(() => {
+                      this.$toast.add({severity:'success', summary: 'Successful', detail: 'Updated Created', life: 3000});
+                  })
+
+            this.editQuoteDialog = false;
+            this.quote = {};
+        },
 
         editQuote(quote) {
             this.quote = { ...quote };
@@ -205,8 +225,7 @@ export default {
         deleteQuote(index) {
             axios
                 .delete(`http://localhost:3000/quotes/${index}`)
-                .then(response => {
-                    console.log(response)
+                .then(() => {
                     window.location.reload()
                 })
                 .catch(err=> (console.log(err)))
